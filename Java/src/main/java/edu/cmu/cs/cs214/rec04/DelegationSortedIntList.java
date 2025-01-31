@@ -47,9 +47,6 @@ public class DelegationSortedIntList implements IntegerList {
      */
     @Override
     public boolean addAll(IntegerList list) {
-        // We cannot simply call delegate.addAll(list),
-        // because delegate itself doesn't increment any "added" counter.
-        // Instead, we count manually:
         boolean modified = false;
         for (int i = 0; i < list.size(); i++) {
             totalAdded++;

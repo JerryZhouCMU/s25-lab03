@@ -31,7 +31,6 @@ public class InheritanceSortedIntList extends SortedIntList {
      */
     @Override
     public boolean add(int num) {
-        // We increment the totalAdded count *before* calling super.
         totalAdded++;
         return super.add(num);
     }
@@ -45,8 +44,6 @@ public class InheritanceSortedIntList extends SortedIntList {
      */
     @Override
     public boolean addAll(IntegerList list) {
-        // Because super.addAll(...) calls our overridden add(int) for each element,
-        // totalAdded will be incremented once per element there as well.
         return super.addAll(list);
     }
 
